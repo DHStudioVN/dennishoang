@@ -584,28 +584,29 @@
       nav { padding: 20px 24px; }
       nav.scrolled { padding: 14px 24px; }
 
-      .nav-links {
+      .nav-links { display: none; }
+
+      #mobile-menu {
         display: none;
-        width: 100%;
+        position: fixed;
+        inset: 0;
+        background: var(--color-bg);
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex: 1;
         gap: 36px;
+        z-index: 98;
+        list-style: none;
       }
 
-      .nav-links.open { display: flex; }
+      #mobile-menu.open { display: flex; }
 
-      nav.menu-open {
-        height: 100dvh;
-        background: var(--color-bg) !important;
-        flex-wrap: wrap;
-        align-content: flex-start;
-      }
-
-      .nav-links a {
+      #mobile-menu a {
         font-size: 1.1rem;
+        font-weight: 500;
         letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-text);
       }
 
       .nav-toggle { display: block; z-index: 101; }
@@ -708,6 +709,13 @@
       </button>
     </div>
   </nav>
+
+  <!-- Mobile menu overlay — sits outside <nav> to avoid iOS fixed-in-fixed bug -->
+  <ul id="mobile-menu">
+    <li><a href="#portfolio" data-vi="Tác Phẩm"  data-en="Portfolio" onclick="closeNav()">Tác Phẩm</a></li>
+    <li><a href="#about"     data-vi="Giới Thiệu" data-en="About"    onclick="closeNav()">Giới Thiệu</a></li>
+    <li><a href="#contact"   data-vi="Liên Hệ"   data-en="Contact"   onclick="closeNav()">Liên Hệ</a></li>
+  </ul>
 
   <!-- ============================================================
        HERO
@@ -962,17 +970,15 @@
     });
 
     // ---- Mobile menu ----
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks  = document.getElementById('nav-links');
+    const navToggle  = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
 
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      navbar.classList.toggle('menu-open');
+      mobileMenu.classList.toggle('open');
     });
 
     function closeNav() {
-      navLinks.classList.remove('open');
-      navbar.classList.remove('menu-open');
+      mobileMenu.classList.remove('open');
     }
 
     // ---- Portfolio filter ----
