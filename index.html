@@ -586,17 +586,22 @@
 
       .nav-links {
         display: none;
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: var(--color-bg);
+        width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        flex: 1;
         gap: 36px;
-        z-index: 99;
       }
 
       .nav-links.open { display: flex; }
+
+      nav.menu-open {
+        height: 100dvh;
+        background: var(--color-bg) !important;
+        flex-wrap: wrap;
+        align-content: flex-start;
+      }
 
       .nav-links a {
         font-size: 1.1rem;
@@ -604,11 +609,6 @@
       }
 
       .nav-toggle { display: block; z-index: 101; }
-
-      /* Show lang toggle inside open mobile menu too */
-      .nav-links .lang-toggle-mobile {
-        display: flex;
-      }
 
       #about .container {
         grid-template-columns: 1fr;
@@ -967,10 +967,12 @@
 
     navToggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
+      navbar.classList.toggle('menu-open');
     });
 
     function closeNav() {
       navLinks.classList.remove('open');
+      navbar.classList.remove('menu-open');
     }
 
     // ---- Portfolio filter ----
