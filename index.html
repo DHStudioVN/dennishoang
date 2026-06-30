@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dennis Hoàng — Chuyên Gia Trang Điểm</title>
+  <title>Dennis Hoang — Makeup Artist</title>
 
   <!-- ============================================================
        FONTS
@@ -11,27 +11,22 @@
        To change fonts, swap the Google Fonts URL below and update
        the --font-heading / --font-body variables in :root.
   ============================================================ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Times New Roman is a system font — no external import needed -->
 
   <style>
     /* ============================================================
        CSS VARIABLES — tweak these to restyle the whole site
     ============================================================ */
     :root {
-      --color-bg:      #faf9f7;
-      --color-text:    #1a1a1a;
-      --color-muted:   #888;
-      --color-accent:  #b89a82;   /* warm nude — change this to any colour */
-      --color-border:  #e8e4df;
+      --color-bg:      #ffffff;
+      --color-text:    #0a0a0a;
+      --color-muted:   #666;
+      --color-accent:  #0a0a0a;   /* black accent */
+      --color-border:  #e0e0e0;
       --color-white:   #ffffff;
 
-      --font-heading: 'Cormorant Garamond', Georgia, serif;
-      --font-body:    'DM Sans', system-ui, sans-serif;
+      --font-heading: 'Times New Roman', Times, serif;
+      --font-body:    'Times New Roman', Times, serif;
 
       --max-width:    1200px;
       --section-pad:  100px;
@@ -189,7 +184,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, #f5f0eb 0%, #ede8e3 50%, #e8e0d8 100%);
+      background: #ffffff;
       z-index: 0;
     }
 
@@ -425,7 +420,7 @@
 
     /* ---- ABOUT PHOTO -------------------------------------------
        Replace the placeholder with Dennis's portrait:
-       <img src="images/dennis.jpg" alt="Dennis Hoàng" />
+       <img src="images/dennis.jpg" alt="Dennis Hoang" />
     ------------------------------------------------------------ */
     .about-image { position: relative; }
 
@@ -496,7 +491,7 @@
       text-align: center;
     }
 
-    #contact .section-label  { color: var(--color-accent); }
+    #contact .section-label  { color: rgba(255,255,255,0.5); }
     #contact .section-title  { color: var(--color-white); margin-bottom: 16px; }
 
     .contact-intro {
@@ -531,7 +526,7 @@
       font-weight: 500;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--color-accent);
+      color: rgba(255,255,255,0.5);
     }
 
     .contact-link-value {
@@ -689,7 +684,7 @@
        and the data-vi / data-en text attributes.
   ============================================================ -->
   <nav id="navbar">
-    <a href="#hero" class="nav-logo">Dennis Hoàng</a>
+    <a href="#hero" class="nav-logo">Dennis Hoang</a>
 
     <div class="nav-right">
       <ul class="nav-links" id="nav-links">
@@ -732,7 +727,7 @@
       <p class="hero-eyebrow" data-vi="Thành phố Hồ Chí Minh, Việt Nam" data-en="Ho Chi Minh City, Vietnam">
         Thành phố Hồ Chí Minh, Việt Nam
       </p>
-      <h1 class="hero-name">Dennis<br /><em>Hoàng</em></h1>
+      <h1 class="hero-name">DENNIS<br />HOANG</h1>
       <p class="hero-sub" data-vi="Chuyên Gia Trang Điểm" data-en="Makeup Artist">
         Chuyên Gia Trang Điểm
       </p>
@@ -833,7 +828,7 @@
        ABOUT
        TO ADD DENNIS'S PHOTO, replace the portfolio-placeholder div
        inside .about-image-main with:
-       <img src="images/dennis.jpg" alt="Dennis Hoàng" />
+       <img src="images/dennis.jpg" alt="Dennis Hoang" />
 
        TO UPDATE THE BIO, edit the <p> tags in .about-text.
        Both data-vi and data-en attributes hold the translation;
@@ -853,18 +848,14 @@
 
       <div class="about-text">
         <p class="section-label" data-vi="Giới Thiệu" data-en="About">Giới Thiệu</p>
-        <h2 class="section-title">
-          <span data-vi="Người Nghệ Sĩ" data-en="The Artist">Người Nghệ Sĩ</span><br />
-          <em style="font-family:var(--font-heading);font-style:italic;font-weight:300;"
-              data-vi="Đằng Sau Vẻ Đẹp" data-en="Behind the Look">Đằng Sau Vẻ Đẹp</em>
-        </h2>
+        <h2 class="section-title" data-vi="Về Tôi" data-en="About Me">Về Tôi</h2>
 
         <!-- BIO — update both data-vi and data-en to change the bio text -->
         <p
-          data-vi="Tôi là Dennis Hoàng, chuyên gia trang điểm tại Thành phố Hồ Chí Minh. Tôi có thể thực hiện nhiều phong cách trang điểm khác nhau, nhưng thế mạnh của tôi là phong cách hoa hậu và trang điểm cô dâu."
-          data-en="I'm Dennis Hoàng, a makeup artist based in Ho Chi Minh City, Vietnam.<br />I can create a wide range of makeup styles, but my specialties are beauty queen looks and bridal makeup."
+          data-vi="Tôi là Dennis Hoang, chuyên gia trang điểm tại Thành phố Hồ Chí Minh. Tôi có thể thực hiện nhiều phong cách trang điểm khác nhau, nhưng thế mạnh của tôi là phong cách hoa hậu và trang điểm cô dâu."
+          data-en="I'm Dennis Hoang, a makeup artist based in Ho Chi Minh City, Vietnam.<br />I can create a wide range of makeup styles, but my specialties are beauty queen looks and bridal makeup."
         >
-          Tôi là Dennis Hoàng, chuyên gia trang điểm tại Thành phố Hồ Chí Minh. Tôi có thể thực hiện nhiều phong cách trang điểm khác nhau, nhưng thế mạnh của tôi là phong cách hoa hậu và trang điểm cô dâu.
+          Tôi là Dennis Hoang, chuyên gia trang điểm tại Thành phố Hồ Chí Minh. Tôi có thể thực hiện nhiều phong cách trang điểm khác nhau, nhưng thế mạnh của tôi là phong cách hoa hậu và trang điểm cô dâu.
         </p>
         <p
           data-vi="Mỗi khuôn mặt đều mang một câu chuyện riêng — công việc của tôi là giúp bạn kể câu chuyện đó, một cách đẹp nhất."
@@ -943,10 +934,10 @@
   ============================================================ -->
   <footer>
     <p
-      data-vi="© 2025 Dennis Hoàng. Bảo lưu mọi quyền. Thành phố Hồ Chí Minh, Việt Nam."
-      data-en="© 2025 Dennis Hoàng. All rights reserved. Ho Chi Minh City, Vietnam."
+      data-vi="© 2025 Dennis Hoang. Bảo lưu mọi quyền. Thành phố Hồ Chí Minh, Việt Nam."
+      data-en="© 2025 Dennis Hoang. All rights reserved. Ho Chi Minh City, Vietnam."
     >
-      © 2025 Dennis Hoàng. Bảo lưu mọi quyền. Thành phố Hồ Chí Minh, Việt Nam.
+      © 2025 Dennis Hoang. Bảo lưu mọi quyền. Thành phố Hồ Chí Minh, Việt Nam.
     </p>
   </footer>
 
@@ -1008,8 +999,8 @@
 
       // Update page title
       document.title = lang === 'vi'
-        ? 'Dennis Hoàng — Chuyên Gia Trang Điểm'
-        : 'Dennis Hoàng — Makeup Artist';
+        ? 'Dennis Hoang — Chuyên Gia Trang Điểm'
+        : 'Dennis Hoang — Makeup Artist';
 
       // Swap all translatable text nodes
       document.querySelectorAll('[data-vi][data-en]').forEach(el => {
